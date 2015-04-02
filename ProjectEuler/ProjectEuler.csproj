@@ -73,7 +73,6 @@
     <Compile Include="ReflexivePosition.cs" />
     <Compile Include="SelfPowers.cs" />
     <Compile Include="TruncatablePrimes.cs" />
-    <Compile Include="WhiteRussian.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
