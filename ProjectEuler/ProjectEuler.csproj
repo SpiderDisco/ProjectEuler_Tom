@@ -56,6 +56,7 @@
     <Compile Include="DivisibleTriangleNumbers.cs" />
     <Compile Include="FibTimer.cs" />
     <Compile Include="HttpTester.cs" />
+    <Compile Include="HundredToOne.cs" />
     <Compile Include="LargeSum.cs" />
     <Compile Include="LatticePath.cs" />
     <Compile Include="MillerRabin.cs" />

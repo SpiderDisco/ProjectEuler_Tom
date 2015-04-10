@@ -14,12 +14,14 @@ namespace ProjectEuler
         {
             //TruncatablePrimes.Solve();
             //AlternativeVote.Solve();
-            //WhiteRussian.Make();
-            HttpTester.Request();
+            //HttpTester.Request();
+
+            //FirstTen.Sieve(400);
+            HundredToOne.Solve();
 
             //LargeSum.Solve();
             //DataRead.Start();
-            //Console.ReadKey();
+            Console.ReadKey();
         }
         public static List<int> DoPrimeCount(int count)
         {
