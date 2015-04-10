@@ -12,15 +12,19 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            //TruncatablePrimes.Solve();
-            //AlternativeVote.Solve();
-            //HttpTester.Request();
+            checked
+            {
+                //TruncatablePrimes.Solve();
+                //AlternativeVote.Solve();
+                //HttpTester.Request();
 
-            //FirstTen.Sieve(400);
-            HundredToOne.Solve();
+                //FirstTen.Sieve(400);
+                //HundredToOne.Solve();
+                SelfPowers.Solve();
 
-            //LargeSum.Solve();
-            //DataRead.Start();
+                //LargeSum.Solve();
+                //DataRead.Start();
+            }
             Console.ReadKey();
         }
         public static List<int> DoPrimeCount(int count)

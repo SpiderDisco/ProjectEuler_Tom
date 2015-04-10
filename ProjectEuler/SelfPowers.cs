@@ -10,29 +10,42 @@ namespace ProjectEuler
     {
         public static void Solve()
         {
-            int sum = 0;
-            for (int i = 1; i <= 1000; i++)
+            ulong sum = 0;
+            //ulong nextPower = 0;
+            for (ulong i = 1; i <= 1000; i++)
             {
-                sum += (int)Math.Pow(i, i);
-                if (sum > 1000000000)
+                checked
                 {
-                    string sumStr = sum + "";
-                    sumStr = sumStr.Substring(sumStr.Length - 10);
-                    sum = int.Parse(sumStr);
+                    sum += truncate(Pow2(i, i));
+                    sum = truncate(sum);
                 }
+                
             }
             Console.WriteLine(sum);
-            Console.ReadKey();
         }
-        private static int Pow2(int a, int b)
+        private static ulong truncate(ulong n)
         {
-            int result = 1;
+            string intString = n + "";
+            if (intString.Length>10)
+            {
+                intString = intString.Substring(intString.Length - 10);
+                return ulong.Parse(intString);
+            }
+            else
+            {
+                return n;
+            }
+        }
+        private static ulong Pow2(ulong a, ulong b)
+        {
+            ulong result = 1;
 
-            for (int i = 0; i < b; i++)
+            for (ulong i = 0; i < b; i++)
             {
                 try
                 {
                     result = checked(result *= a);
+                    result = truncate(result);
                 }
                 catch (System.OverflowException e)
                 {
