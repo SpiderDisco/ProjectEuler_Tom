@@ -25,16 +25,26 @@ namespace ProjectEuler
             {
                 grid.Add(new List<string>(line.Split(' ')));
             }
+
+            //check rows
             foreach (List<string> row in grid)
             {
                 CheckRow(row);
             }
+
+            //check columns
+            for (int i = 0; i < grid.Count - 4; i++)
+            {
+
+            }
+
+            //? idk
             List<string> temp = new List<string>();
             for (int i = 0; i < grid.Count; i++)
             {
                 for (int j = 0; j < grid.Count; j++)
                 {
-                    temp.Add(grid[j][i]);
+                    temp.Add(grid[j][i]);   
                 }
                 CheckRow(temp);
                 temp.Clear();
@@ -61,6 +71,7 @@ namespace ProjectEuler
                 }
             }
         }
+        
 
     }
 }
