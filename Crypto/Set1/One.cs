@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Crypto
+namespace Crypto.Set1
 {
     public class One
     {
@@ -15,10 +15,7 @@ namespace Crypto
 
             string correct_answer = "SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t";
 
-            byte[] floatvals = Enumerable.Range(0, hex.Length)
-                     .Where(x => x % 2 == 0)
-                     .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
-                     .ToArray();
+            byte[] floatvals = hexDecode(hex);
 
             base64 = Convert.ToBase64String(floatvals);
 
@@ -30,6 +27,13 @@ namespace Crypto
             {
                 Console.WriteLine("incorrect");
             }
+        }
+        public static byte[] hexDecode(string hex)
+        {
+            return Enumerable.Range(0, hex.Length)
+                     .Where(x => x % 2 == 0)
+                     .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
+                     .ToArray();
         }
     }
 }
