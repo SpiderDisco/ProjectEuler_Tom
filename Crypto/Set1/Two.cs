@@ -34,7 +34,15 @@ namespace Crypto.Set1
         public static string xor(byte[] input1, byte[] input2)
         {
             string result = "";
+            List<byte> xorResult = new List<byte>();
 
+            for (int i = 0; i < input1.Length;i++ )
+            {
+                var xor = (byte)(input1[i] ^ input2[i]);
+                Console.WriteLine("{0}^{1}={2}",input1[i],input2[i],xor);
+                xorResult.Add(xor);
+            }
+            result = Convert.ToBase64String(xorResult.ToArray());
             return result;
         }
 
