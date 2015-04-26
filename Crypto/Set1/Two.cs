@@ -13,13 +13,13 @@ namespace Crypto.Set1
             string hex1 = "1c0111001f010100061a024b53535009181c";
             string hex2 = "686974207468652062756c6c277320657965";
 
-            byte[] decoded1 = One.hexDecode(hex1);
-            byte[] decoded2 = One.hexDecode(hex2);
+            byte[] decoded1 = One.HexDecode(hex1);
+            byte[] decoded2 = One.HexDecode(hex2);
 
             string correct_answer = "746865206b696420646f6e277420706c6179";
+            correct_answer =  BitConverter.ToString(One.HexDecode(correct_answer));
 
             string my_answer = xor(decoded1, decoded2);
-
 
             if (my_answer == correct_answer)
             {
@@ -28,8 +28,8 @@ namespace Crypto.Set1
             else
             {
                 Console.WriteLine("incorrect");
+                Console.WriteLine(my_answer);
             }
-
         }
         public static string xor(byte[] input1, byte[] input2)
         {
@@ -41,7 +41,10 @@ namespace Crypto.Set1
                 var xor = (byte)(input1[i] ^ input2[i]);
                 xorResult.Add(xor);
             }
-            result = Convert.ToBase64String(xorResult.ToArray());
+            
+            result = BitConverter.ToString(xorResult.ToArray());
+            result.Replace("-", "");
+
             return result;
         }
 
