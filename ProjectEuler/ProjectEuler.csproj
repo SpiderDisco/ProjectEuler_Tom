@@ -67,6 +67,7 @@
     <Compile Include="LongestCollatz.cs" />
     <Compile Include="MyCalculator.cs" />
     <Compile Include="NonAbundantSums.cs" />
+    <Compile Include="PowerPuzzle.cs" />
     <Compile Include="PrimeGeneratingIntegers.cs" />
     <Compile Include="ProductMatrix.cs" />
     <Compile Include="Program.cs" />

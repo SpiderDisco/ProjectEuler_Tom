@@ -12,9 +12,11 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            LargestInGrid.Solve();
+            PowerPuzzle.Solve();
             Console.ReadKey();
         }
+
+        #region stuff
         public static List<int> DoPrimeCount(int count)
         {
             List<int> P = new List<int>();
@@ -99,5 +101,6 @@ namespace ProjectEuler
             }
             return result;
         }
+        #endregion
     }
 }
