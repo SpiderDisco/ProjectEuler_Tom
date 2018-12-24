@@ -38,29 +38,7 @@ namespace ProjectEuler
         }
         private static void GetLists(List<int> a, List<int> b)
         {
-            int trinary = 1;
-            bool toggle = true;
-            for (int i = 0; i < _n; i++)
-            {
-                if (toggle)
-                {
-                    a.Add(i);
-                }
-                else
-                {
-                    b.Add(i);
-                }
-                if(trinary==1)
-                {
-                    toggle = !toggle;
-                    trinary = 0;
-                }
-                else
-                {
-                    trinary++;
-                }
-                
-            }
+            
             PrintArray(a);
             PrintArray(b);
         }

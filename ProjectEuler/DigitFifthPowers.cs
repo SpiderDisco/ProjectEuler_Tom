@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
+    //digit fifth powers
     class DigitFifthPowers
     {
         public static void Solve()
