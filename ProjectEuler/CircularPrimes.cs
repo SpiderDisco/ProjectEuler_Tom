@@ -25,9 +25,22 @@ namespace ProjectEuler
         }
         static bool IsCircular(int p)
         {
-            string n = p + "";
+            string primeString = p + "";
+            string rotation = rotate(primeString);
+            for(int i=0; i<primeString.Length; i++)
+            {
+                if(!primes.Contains(int.Parse(rotation)))
+                {
+                    return false;
+                }
+                rotation = rotate(rotation);
+            }
 
-            return false;
+            return true;
+        }
+        static string rotate(string s)
+        {
+            return s.Remove(0, 1) + s[0];
         }
     }
 }
