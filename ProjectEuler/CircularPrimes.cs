@@ -12,12 +12,21 @@ namespace ProjectEuler
         static List<int> circularPrimes;
         public static void Solve()
         {
-            primes = FirstTen.SieveEratosthenes(1000);
-            circularPrimes = new List<int>();
+            primes = FirstTen.SieveEratosthenes(1000000);
+            circularPrimes = new List<int>() { 2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, 97 };
+            foreach(int prime in primes)
+            {
+                if (!circularPrimes.Contains(prime) && IsCircular(prime))
+                {
+                    circularPrimes.Add(prime);
+                }
+            }
+            Console.WriteLine(circularPrimes.Count);
         }
-        public bool IsCircular(int p)
+        static bool IsCircular(int p)
         {
             string n = p + "";
+
             return false;
         }
     }

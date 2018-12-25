@@ -12,7 +12,7 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            PowerPuzzle.Solve();
+            CircularPrimes.Solve();
             Console.ReadKey();
         }
 
