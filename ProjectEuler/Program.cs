@@ -15,7 +15,7 @@ namespace ProjectEuler
             Stopwatch sw = new Stopwatch();
             sw.Start();
 
-            DistinctPowers.Solve();
+            LargeSum.Solve();
 
             sw.Stop();
             Console.WriteLine("Time Elapsed: {0} seconds",sw.Elapsed.TotalSeconds);
