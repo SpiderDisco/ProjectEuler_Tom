@@ -12,7 +12,7 @@ namespace ProjectEuler
         static List<int> circularPrimes;
         public static void Solve()
         {
-            primes = FirstTen.SieveEratosthenes(1000000);
+            primes = Program.SieveEratosthenes(1000000);
             circularPrimes = new List<int>() { 2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, 97 };
             foreach(int prime in primes)
             {
@@ -35,7 +35,6 @@ namespace ProjectEuler
                 }
                 rotation = rotate(rotation);
             }
-
             return true;
         }
         static string rotate(string s)

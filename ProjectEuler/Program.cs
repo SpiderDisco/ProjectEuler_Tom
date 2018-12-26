@@ -12,7 +12,13 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            CircularPrimes.Solve();
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
+            DistinctPowers.Solve();
+
+            sw.Stop();
+            Console.WriteLine("Time Elapsed: {0} seconds",sw.Elapsed.TotalSeconds);
             Console.ReadKey();
         }
 

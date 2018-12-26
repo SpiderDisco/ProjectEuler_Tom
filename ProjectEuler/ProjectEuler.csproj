@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AlternativeVote.cs" />
     <Compile Include="Amicable.cs" />
+    <Compile Include="BigInteger.cs" />
     <Compile Include="BouncyNumbers.cs" />
     <Compile Include="EuclidProblem.cs" />
     <Compile Include="ClassGuessNumbers.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="LongestCollatz.cs" />
     <Compile Include="MyCalculator.cs" />
     <Compile Include="NonAbundantSums.cs" />
+    <Compile Include="NumberLetterCounts.cs" />
     <Compile Include="PowerPuzzle.cs" />
     <Compile Include="PrimeGeneratingIntegers.cs" />
     <Compile Include="ProductMatrix.cs" />
