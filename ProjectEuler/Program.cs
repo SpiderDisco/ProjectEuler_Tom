@@ -15,7 +15,7 @@ namespace ProjectEuler
             Stopwatch sw = new Stopwatch();
             sw.Start();
 
-            LargeSum.Solve();
+            _1000DigitFib.Solve();
 
             sw.Stop();
             Console.WriteLine("Time Elapsed: {0} seconds",sw.Elapsed.TotalSeconds);
@@ -109,4 +109,10 @@ namespace ProjectEuler
         }
         #endregion
     }
+    /**
+    public static void Solve()
+    {
+
+    }
+    */
 }
